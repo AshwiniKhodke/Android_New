@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.interactivity.SportsActivity">
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="onMain"
+        android:text="Back" />
+
+    <CheckBox
+        android:id="@+id/chAnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/btn2"
+        android:layout_toStartOf="@+id/btn2"
+        android:text="Android" />
+
+    <CheckBox
+        android:id="@+id/chWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chAnd"
+        android:layout_alignStart="@+id/chAnd"
+        android:layout_below="@+id/chAnd"
+        android:layout_marginTop="26dp"
+        android:text="Window" />
+
+    <CheckBox
+        android:id="@+id/chLin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chWin"
+        android:layout_alignStart="@+id/chWin"
+        android:layout_below="@+id/chWin"
+        android:layout_marginTop="37dp"
+        android:text="Linux" />
+
+    <TextView
+        android:id="@+id/txtCmp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chLin"
+        android:layout_alignStart="@+id/chLin"
+        android:layout_centerVertical="true"
+        android:text="TextView" />
+
+
+</RelativeLayout>
