@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         final ArrayList<String> pcs = new ArrayList<>();
+        cstAdp();
+    }
+    private void arrAdp() {
+    final ArrayList<String> pcs = new ArrayList<>();
          pcs.add("Windows");
          pcs.add("Mac");
          pcs.add("Dell");
@@ -22,10 +26,55 @@ public class MainActivity extends AppCompatActivity {
          pcs.add("Super");
          pcs.add("Quantum");
 
-        ArrayAdapter adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,pcs);
-        ListView lstVw = findViewById(R.id.lstVw);
+    ArrayAdapter adapter = new ArrayAdapter<>(
+                    this,
+                    android.R.layout.simple_list_item_1,
+                    pcs);
+    ListView lstVw = findViewById(R.id.lstVw);
         lstVw.setAdapter(adapter);
-
-
-    }
 }
+    private void cstAdp(){
+        List<ImgItm> dtSt = new ArrayList<>();
+        dtSt.add(
+                new ImgItm(
+                        R.mipmap.ic_launcher,
+                        "Windows"
+                )
+        );
+        dtSt.add(
+                new ImgItm(
+                        R.mipmap.ic_launcher,
+                        "Mac"
+                )
+        );
+        dtSt.add(
+                new ImgItm(
+                        R.drawable.ic_launcher_background,
+                        "IBM"
+                )
+        );
+        dtSt.add(
+                new ImgItm(
+                        R.drawable.ic_launcher_foreground,
+                        "Quantum"
+                )
+        );
+        dtSt.add(
+                new ImgItm(
+                        R.drawable.ic_launcher_foreground,
+                        "Dell"
+                )
+        );
+
+        ImgAdapter adapter = new ImgAdapter(
+                this,
+                dtSt
+        );
+
+        ListView lstView = findViewById(R.id.lstVw);
+        lstView.setAdapter(adapter);
+    }
+
+}
+
+
