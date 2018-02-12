@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.fragments.BlankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/btnBike"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnBk" />
+
+    <Button
+        android:id="@+id/btnPlane"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnPln"/>
+
+    <Button
+        android:id="@+id/btnRail"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRal"/>
+
+</LinearLayout>
