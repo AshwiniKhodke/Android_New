@@ -1,0 +1,13 @@
+{
+  "name":"www.google.com",
+  "rating":"5 Star",
+  "Popularity":90,
+  "Courses":[
+    "Android",
+    "Java",
+    "C++"],
+  "Infra":{
+    "Table":true,
+    "Chairs":200
+  }
+}
